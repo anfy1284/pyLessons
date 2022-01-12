@@ -135,7 +135,7 @@ EMPLOEE_NUMBER = 1000 #Количество сотрудников
 MAX_SALARY = 500000 #Максимальная з/п
 
 try:
-    with open('task03.txt', 'w') as file_obj:
+    with open('task03.txt', 'w', encoding='utf-8') as file_obj:
         for i in range(1, EMPLOEE_NUMBER):
             file_obj.write(f'{random_russian_last_name()} {(random() * MAX_SALARY):.2f}\n')
 except IOError:
@@ -148,7 +148,7 @@ finally:
 OUTPUT_SALARY = 20000
 
 try:
-    with open('task03.txt', 'r') as file_obj:
+    with open('task03.txt', 'r', encoding='utf-8') as file_obj:
         summ = 0
         lines = file_obj.readlines()
         print('Here\'s the loosers:')
